@@ -11,7 +11,7 @@ class book
 {
 public:
     book() {};
-    book(const book& var);
+    book(const book& var);//This seemed odd to me, but ill let you explain it.
 
     string get_name();
     void set_name(string m_name);
@@ -26,4 +26,9 @@ private:
     Date startDate;
     Date endDate;
     bool archive;
+    //I believe we need to add something like queue<Employees> q;
+    //This will require a new object Employee to be made as well
+    
+    //A book has the following properties: name, circulation start date, circulation end date, archived, 
+    //a queue of employees (the employees who are planned to get the book). 
 };
