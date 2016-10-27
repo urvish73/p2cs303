@@ -7,6 +7,7 @@ Each book is initalized with a queue of Employees/Users
 
 When Library calls the function circulate_book(Book)
 the book will move from Archived to Circulating and will be pasased 
-to each person in the queue until its empty then it'll be archived.
+to each person in the queue using pass_on(book) function until queue is empty then it'll be archived.
+
 
 I think we need to understand priority Queues better so heres a link http://en.cppreference.com/w/cpp/container/priority_queue
