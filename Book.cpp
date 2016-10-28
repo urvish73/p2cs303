@@ -37,3 +37,13 @@ void book::set_ending_date(Date m_endDate)
 {
     endDate = m_endDate;
 }
+
+void book::fill_employees(list<Employee>& employeeList)
+{
+    list<Employee>::iterator itr;
+
+    for (itr = employeeList.begin(); itr != employeeList.end(); itr++)
+    {
+        emp.addEmployee(*itr);
+    }
+}
