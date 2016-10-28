@@ -44,6 +44,6 @@ void book::fill_employees(list<Employee>& employeeList)
 
     for (itr = employeeList.begin(); itr != employeeList.end(); itr++)
     {
-        emp.addEmployee(*itr);
+        emp.add_employee(*itr);
     }
 }
