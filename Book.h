@@ -1,3 +1,6 @@
+//Urvish Shah
+//Book class
+
 #pragma once
 
 #include <iostream>
