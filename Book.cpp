@@ -41,6 +41,16 @@ void book::set_ending_date(Date m_endDate)
     endDate = m_endDate;
 }
 
+Date book::get_last_circ_date()
+{
+	return last_circ_date;
+}
+
+void book::set_last_circ_date(Date new_circ_date)
+{
+	last_circ_date = new_circ_date;
+}
+
 void book::fill_employees(list<Employee>& employeeList)
 {
     list<Employee>::iterator itr;
