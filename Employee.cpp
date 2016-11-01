@@ -1,16 +1,8 @@
-/*
-Name: Nathaniel Barnett
-cpp file for body functions of Employee class.
-*/
-
 #include "Employee.h"
 
-void Employee::set_retaining_time()
+Employee::Employee(string name)
 {
-
-}
-
-void Employee::set_waiting_time()
-{
-
+    employee_name = name;
+    waiting_time = 0;
+    retaining_time = 0;
 }
