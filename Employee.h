@@ -23,4 +23,5 @@ public:
 	int get_retaining_time() { return retaining_time; }
 	void set_waiting_time();
 	void set_retaining_time();
+	//Testing upload functionality ^_^
 };
