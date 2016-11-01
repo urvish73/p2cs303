@@ -1,3 +1,6 @@
+//Urvish Shah
+//Book class
+
 #include "Book.h"
 
 book::book(const book& var)
