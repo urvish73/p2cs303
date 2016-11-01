@@ -15,6 +15,8 @@ private:
 	int waiting_time, retaining_time;
 
 public:
+	void employee() { waiting_time = 0; retaining_time = 0; }
+	void employee(string m_name) { name = m_name; waiting_time = 0; retaining_time = 0; }
 	string get_name() { return name; }
 	void set_name(string m_name) { name = m_name; }
 	int get_waiting_time() { return waiting_time; }
