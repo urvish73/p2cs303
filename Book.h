@@ -25,14 +25,14 @@ public:
     void set_beginning_date(Date m_startDate);
     Date get_ending_date();
     void set_ending_date(Date m_endDate);
-	Date get_last_circ_date();
-	void set_last_circ_date(Date new_circ_date)
+    Date get_last_circ_date();
+    void set_last_circ_date(Date new_circ_date)
 
     void fill_employees(list<Employee>& employeeList);
 
 private:
     string book_name;
-	Date last_circ_date;
+    Date last_circ_date;
     Date startDate;
     Date endDate;
     bool archive;
