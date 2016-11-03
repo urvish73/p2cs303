@@ -24,5 +24,5 @@ public:
 	int get_retaining_time() { return retaining_time; }
 	void set_waiting_time(Employee prev_owner);
 	void set_retaining_time(book current_book, Date new_circ_date);
-	//Testing upload functionality ^_^
+	//Testing upload functionality ^_^//
 };
