@@ -1,3 +1,6 @@
+//Urvish Shah
+//Book class
+
 #include "Book.h"
 
 book::book(const book& var)
@@ -38,12 +41,26 @@ void book::set_ending_date(Date m_endDate)
     endDate = m_endDate;
 }
 
+Date book::get_last_circ_date()
+{
+	return last_circ_date;
+}
+
+void book::set_last_circ_date(Date new_circ_date)
+{
+	last_circ_date = new_circ_date;
+}
+
+//Had a talk with Dr.Kuhail and he recommended to use this as now we don't have to worry about parallel coding.
 void book::fill_employees(list<Employee>& employeeList)
 {
     list<Employee>::iterator itr;
+    
+    omp_set_num_threads(3);
 
+    #pragma omp parallel for
     for (itr = employeeList.begin(); itr != employeeList.end(); itr++)
     {
-        emp.addEmployee(*itr);
+	emp.addEmployee(*itr); //function not declared yet since priority class is not made.   
     }
 }
