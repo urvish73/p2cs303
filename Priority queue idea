@@ -1,0 +1,11 @@
+Heres an idea : http://stackoverflow.com/questions/19535644/how-to-use-the-priority-queue-stl-for-objects
+Scroll to the 3rd answer. it starts with : A priority queue is an abstract data type that captures the idea of a container whose elements
+have "priorities" attached to them. 
+
+
+From this example i had an idea.
+We should have a class CompareEmployees
+it will have a function similar to the example in CompareTime
+
+It seems me will need to change a couple things to fully implement a priority queue but for now just wanted to share this info
+since i think our priority queue should look similar to it.
