@@ -9,3 +9,8 @@ it will have a function similar to the example in CompareTime
 
 It seems me will need to change a couple things to fully implement a priority queue but for now just wanted to share this info
 since i think our priority queue should look similar to it.
+
+void book::fill_employees(queue<Employee>& employeeQueue)
+{
+    emp = employeeQueue;
+}
