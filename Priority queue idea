@@ -7,24 +7,19 @@ From this example i had an idea.
 We should have a class CompareEmployees
 it will have a function similar to the example in CompareTime
 
-It seems me will need to change a couple things to fully implement a priority queue but for now just wanted to share this info
-since i think our priority queue should look similar to it.
-
-void book::fill_employees(queue<Employee>& employeeQueue)
-{
-    emp = employeeQueue;
-}
-
-priority_queue<Time, vector<Time>, CompareTime> pq;
-
 The priority we need to compare would look like
 
 class CompareEmployee {
     public:
-    bool operator()(Employee& 1, Employee& 2)
+    bool operator>()(Employee& 1, Employee& 2)
     {
        if ((1.get_waiting_time()-1.get_retaining_time()) > (2.get_waiting_time()-2.get_retaining_time()))
                return true;
        return false;
     }
 }
+
+we should change our private variable queue<Employee> emp; to priority_queue<Employee> emp;
+
+Here is another useful website 
+http://web.eecs.utk.edu/~leparker/Courses/CS302-Fall06/Notes/PQueues/priority.cpp
