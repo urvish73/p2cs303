@@ -14,3 +14,7 @@ void book::fill_employees(queue<Employee>& employeeQueue)
 {
     emp = employeeQueue;
 }
+
+priority_queue<Time, vector<Time>, CompareTime> pq;
+
+edit the fill_employee to maybe read something like : <employeeQueue, queue<employeeQueue, CompareEmployee> emp;
