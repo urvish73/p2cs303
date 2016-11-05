@@ -19,7 +19,8 @@ class CompareEmployee {
     }
 }
 
-we should change our private variable queue<Employee> emp; to priority_queue<Employee> emp;
+we should change our private variable queue<Employee> emp; to priority_queue<Employee> emp; We might need to change the fillEmployee function
+i just dont know if you can set a priority_queue emp = to a regular queue like we are currently doing.
 
 Here is another useful website 
 http://web.eecs.utk.edu/~leparker/Courses/CS302-Fall06/Notes/PQueues/priority.cpp
