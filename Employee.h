@@ -3,7 +3,9 @@ Name: Nathaniel Barnett
 Header file for employee class
 */
 
-#pragma once
+#ifndef Employee_H
+#define Employee_H
+
 #include <string>
 #include "Date.h"
 #include "Book.h"
@@ -16,8 +18,8 @@ private:
 	int waiting_time, retaining_time;
 
 public:
-	void employee() { waiting_time = 0; retaining_time = 0; }
-	void employee(string m_name) { name = m_name; waiting_time = 0; retaining_time = 0; }
+	Employee() { waiting_time = 0; retaining_time = 0; }
+	Employee(string m_name) { name = m_name; waiting_time = 0; retaining_time = 0; }
 	string get_name() { return name; }
 	void set_name(string m_name) { name = m_name; }
 	int get_waiting_time() { return waiting_time; }
@@ -25,4 +27,8 @@ public:
 	void set_waiting_time(Employee prev_owner);
 	void set_retaining_time(book current_book, Date new_circ_date);
 	//Testing upload functionality ^_^//
+	bool operator>(Employee & E2);
+	int emp_priority();
 };
+
+#endif // !1
