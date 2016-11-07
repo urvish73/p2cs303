@@ -1,0 +1,20 @@
+
+
+
+priority(){
+
+	Employee *top_val = *EmployeeQueue.begin(); //make the fist element the max value
+
+	queue<Employee*>::iterator itr;
+	itr = EmployeeQueue.begin();
+
+	itr++; //so that we dont compare our top_val to itself
+
+	for (itr; itr!= EmployeeQueue.end(); itr++)
+	{
+		if ((top_val->getWaitingtime() - top_val.getRetainingtime()) > ((*itr)->getWaitingtime - (itr*)->getRetainingtime()))
+			top_val = *itr;
+	}
+
+	return top_val;
+}
