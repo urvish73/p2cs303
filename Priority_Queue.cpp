@@ -4,16 +4,28 @@
 #include "Priority_Queue.h"
 using namespace std;
 
-void Priority_Queue::Prioritize()
+Employee* Priority_Queue::_top_priority()
 {
-	queue<Employee> temp_queue;
-	int size = PQ.size();
-	for (int i = 0; i < size; i++)
+	list<Employee*>::iterator itr;
+	Employee* Temp_emp = PQ.front();
+	for (itr = PQ.begin(); itr != PQ.end(); itr++)
 	{
-		temp_queue.push(top_priority());
+		if (*(*itr) > *Temp_emp)
+		{
+			Temp_emp = *itr;
+		}
 	}
+	return Temp_emp;
+}
 
-	PQ = temp_queue;
+Employee& Priority_Queue::top()
+{
+	return *_top_priority();
+}
+
+void Priority_Queue::pop()
+{
+	PQ.remove(_top_priority());
 }
 
 Priority_Queue::Priority_Queue()
@@ -21,33 +33,18 @@ Priority_Queue::Priority_Queue()
 	;
 }
 
-Employee Priority_Queue::top_priority() {
-
-	Employee max_val = PQ.front(); //make the fist element the max value
-	Employee temp_emp;
-	int to_be_deleted_location;
-
-	PQ.pop();
-	PQ.push(max_val);
-	for (int i = 0; i < PQ.size(); i++)
+void Priority_Queue::addEmployee(Employee* emp_pointer)
+{
+	list<Employee*>::iterator itr = PQ.begin();
+	for (itr; itr != PQ.end(); itr++)
 	{
-		if (max_val.emp_priority() < PQ.front().emp_priority())
+		if (*emp_pointer > *(*itr))	//since iterator points to a pointer, must be dereferenced twice
 		{
-			to_be_deleted_location = i;
-			max_val = PQ.front();
+			PQ.insert(itr, emp_pointer);
+			break;
 		}
-		PQ.push(PQ.front());
-		PQ.pop();
 	}
-	for (int i = 0; i < to_be_deleted_location; i++)
-	{
-		PQ.push(PQ.front());
-		PQ.pop();
-	}
-
-	PQ.pop();
-
-	return max_val;
+	PQ.push_back(emp_pointer);
 }
 
 #endif

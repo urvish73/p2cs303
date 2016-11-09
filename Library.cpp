@@ -1,5 +1,9 @@
-#pragma once
+#ifndef Library_CPP
+#define Library_CPP
+
 #include "Library.h"
+
+using namespace std;
 
 void Library::add_book(string book_name)
 {
@@ -20,5 +24,7 @@ void Library::circulate_book(string book_name, Date start)
 
 void Library::pass_on(string book_name, Date pass)
 {
-
+	;
 }
+
+#endif

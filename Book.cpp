@@ -1,20 +1,40 @@
 //Urvish Shah
 //Book class
+#ifndef Book_CPP
+#define Book_CPP
 
+#include "Priority_Queue.h"
+#include <list>
+#include <omp.h>
+#include "Employee.h"
 #include "Book.h"
+using namespace std;
 
-book::book(const book& var)
+book::book()
+{
+	archive = true;
+}
+
+book::book(string m_name)
+{
+	book_name = m_name;
+	archive = true;
+}
+
+/*book::book(const book& var)
 {
     book_name = var.book_name;
     startDate = var.startDate;
     endDate = var.endDate;
     archive = var.archive;
-}
+	emp_queue = var.emp_queue;
+}*/
 
 string book::get_name()
 {
     return book_name;
 }
+
 
 Date book::get_beginning_date()
 {
@@ -61,6 +81,14 @@ void book::fill_employees(list<Employee>& employeeList)
     #pragma omp parallel for
     for (itr = employeeList.begin(); itr != employeeList.end(); itr++)
     {
-	emp.addEmployee(*itr); //function not declared yet since priority class is not made.   
+		Employee* new_emp = new Employee(*itr);
+		emp_queue.addEmployee(new_emp); //function not declared yet since priority class is not made.   
     }
+	/*
+	for (itr = employeeList.begin(); itr != employeeList.end(); itr++)
+	{
+		emp_queue.push(*itr);
+	}*/
 }
+
+#endif // !1

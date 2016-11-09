@@ -1,7 +1,11 @@
-#pragma once
+#ifndef Library_H
+#define Library_H
+
 #include <string>
 #include <list>
 #include "Date.h"
+#include "Employee.h"
+#include "Priority_Queue.h"
 
 using namespace std;
 
@@ -22,3 +26,5 @@ public:
     void circulate_book(string book_name, Date start); //Start circulation for book on a specific day.
     void pass_on(string book_name, Date pass); //Pass the book from one employee to the next on a specific day.
 };
+
+#endif // !1

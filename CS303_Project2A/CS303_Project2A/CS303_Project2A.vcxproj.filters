@@ -30,6 +30,12 @@
     <ClInclude Include="..\..\Library.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Compare Employee.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Priority_Queue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\main.cpp">
@@ -42,6 +48,9 @@
       <Filter>Resource Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Library.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Priority_Queue.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>

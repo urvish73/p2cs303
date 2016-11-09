@@ -8,7 +8,7 @@ Header file for employee class
 
 #include <string>
 #include "Date.h"
-#include "Book.h"
+
 using namespace std;
 
 class Employee {
@@ -25,7 +25,7 @@ public:
 	int get_waiting_time() { return waiting_time; }
 	int get_retaining_time() { return retaining_time; }
 	void set_waiting_time(Employee prev_owner);
-	void set_retaining_time(book current_book, Date new_circ_date);
+	void set_retaining_time(Date last_circ_date, Date new_circ_date);
 	//Testing upload functionality ^_^//
 	bool operator>(Employee & E2);
 	int emp_priority();
