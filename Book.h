@@ -30,6 +30,7 @@ public:
 	void set_last_circ_date(Date new_circ_date);
 
 	void fill_employees(list<Employee>& employeeList);
+	void pass_book(Date pass_date);
 
 private:
 	string book_name;

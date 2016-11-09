@@ -18,6 +18,15 @@ Employee* Priority_Queue::_top_priority()
 	return Temp_emp;
 }
 
+void Priority_Queue::update_emp_times(int waiting_time)
+{
+	list<Employee*>::iterator itr = PQ.begin();
+	for (itr; itr != PQ.end(); itr++)
+	{
+		(*itr)->set_waiting_time(waiting_time);
+	}
+}
+
 Employee& Priority_Queue::top()
 {
 	return *_top_priority();

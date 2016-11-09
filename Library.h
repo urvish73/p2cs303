@@ -6,6 +6,7 @@
 #include "Date.h"
 #include "Employee.h"
 #include "Priority_Queue.h"
+#include "Book.h"
 
 using namespace std;
 
@@ -13,9 +14,9 @@ class Library
 {
 private:
 
-    list<string> archived_books; //List of archived books.
-    list<string> circulating_books; //List of books in circulation.
-    list<string> employee_names; //List of employees who will check books out.
+    list<book> archived_books; //List of archived books.
+    list<book> circulating_books; //List of books in circulation.
+    list<Employee> employee_names; //List of employees who will check books out.
 
 public:
 

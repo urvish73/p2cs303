@@ -71,6 +71,13 @@ void book::set_last_circ_date(Date new_circ_date)
 	last_circ_date = new_circ_date;
 }
 
+void book::pass_book(Date pass_date)
+{
+	int w_time = emp_queue.top().set_retaining_time(last_circ_date, pass_date);
+	emp_queue.pop();
+	emp_queue.update_emp_times(w_time);
+}
+
 //Had a talk with Dr.Kuhail and he recommended to use this as now we don't have to worry about parallel coding.
 void book::fill_employees(list<Employee>& employeeList)
 {
