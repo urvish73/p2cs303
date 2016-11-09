@@ -9,7 +9,6 @@
 #include "Employee.h"
 #include "Book.h"
 using namespace std;
-//UPDATE
 
 book::book()
 {
@@ -79,7 +78,6 @@ void book::pass_book(Date pass_date)
 	emp_queue.update_emp_times(w_time);
 }
 
-//Had a talk with Dr.Kuhail and he recommended to use this as now we don't have to worry about parallel coding.
 void book::fill_employees(list<Employee>& employeeList)
 {
     list<Employee>::iterator itr;
@@ -92,11 +90,6 @@ void book::fill_employees(list<Employee>& employeeList)
 		Employee* new_emp = new Employee(*itr);
 		emp_queue.addEmployee(new_emp); //function not declared yet since priority class is not made.   
     }
-	/*
-	for (itr = employeeList.begin(); itr != employeeList.end(); itr++)
-	{
-		emp_queue.push(*itr);
-	}*/
 }
 
 #endif // !1
