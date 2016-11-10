@@ -26,6 +26,7 @@ void Library::circulate_book(string book_name, Date start)
     {
         if (book_name == itr->get_name())//If we fiind the book, itr will be our gateway to its data types.
         {
+	    itr->fill_employees(employee_names);//Pass the list of employees so that the book can have its own private queue of employees.
             itr->set_beginning_date(start);//Keep info on when the book starts circulation.
             circulating_books.push_front(*itr);//Push it onto the list of circulating books.
             archived_books.remove(*itr);//Remove it from the list of archived books.
