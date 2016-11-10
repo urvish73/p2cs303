@@ -19,7 +19,7 @@ private:
 	int waiting_time, retaining_time;
 
 public:
-	Employee() { waiting_time = 0; retaining_time = 0; }
+	Employee() {};
 	Employee(string m_name) { name = m_name; waiting_time = 0; retaining_time = 0; }
 	string get_name() { return name; }
 	void set_name(string m_name) { name = m_name; }
