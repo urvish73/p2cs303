@@ -89,7 +89,7 @@ void book::fill_employees(list<Employee>& employeeList)
     #pragma omp parallel for
     for (itr = employeeList.begin(); itr != employeeList.end(); itr++)
     {
-		Employee* new_emp = new Employee(*itr);
+		Employee* new_emp = &(*itr);
 		emp_queue.addEmployee(new_emp); //function not declared yet since priority class is not made.   
     }
 	/*
