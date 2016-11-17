@@ -61,7 +61,7 @@ void book::set_last_circ_date(Date new_circ_date)
 void book::fill_employees(list<Employee>& employeeList)
 {
     list<Employee>::iterator itr;
-    omp_set_num_threads(3);
+    omp_set_num_threads(4);
 
 #pragma omp parallel for//Parallel Programming to speed it up!
     for (itr = employeeList.begin(); itr != employeeList.end(); itr++)//Iterate through employeeList.
